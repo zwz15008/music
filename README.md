@@ -8,15 +8,13 @@
 
 # 使用方式简介
 
-1. 使用IDEA运行后访问[Document](http://localhost:8080/login.html)
-
-2. 测试账号:admin
+测试账号:admin
    密码:123456
 
 # 使用技术简介
 
 1. 后端使用SSM框架
 
-2. 前端使用Jquery
+2. 前端使用Ajax
 
 3. Bcrypt加密
