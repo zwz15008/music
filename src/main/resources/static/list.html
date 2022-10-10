@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>musiclist</title>
+    <link rel="stylesheet" type="text/css" href="./css/list.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript">
         $(function () {
@@ -115,28 +116,25 @@
     </script>
 </head>
 <body>
-
-<div class="container">
-    <h3 sytle="text-align: center">在线音乐服务器</h3>
-    <div>
-        <div style="float: left">
+<div class="background">
+    <h3 >我的主页</h3>
+    <div class="container" >
+        <div class="search">
             <form>
                 <div>
-                    <span>歌曲名</span>
-                    <input type="text" class="music_name">
+                    <input type="text" class="music_name" placeholder="输入想要查询的歌曲名">
                     <button id="submit1" type="button">查询</button>
                 </div>
-
             </form>
         </div>
-        <div style="float: right;margin-bottom: 15px">
-            <a class="btn_favourite" href="favourite.html">喜欢列表</a>
-            <a class="btn_add" href="upload.html">添加歌曲</a>
-            <a class="btn_delete">删除选中</a>
+        <div class="button-bar">
+            <a class="btn_b" href="favourite.html">喜欢列表</a>
+            <a class="btn_b" href="upload.html">添加歌曲</a>
+            <a class="btn_b">删除选中</a>
         </div>
     </div>
-    <div>
-        <table border="1" class="table">
+    <div class="container">
+        <table class="table">
             <tr class="success">
                 <th>选择</th>
                 <th>歌名</th>
@@ -144,11 +142,11 @@
                 <th>歌曲</th>
                 <th>操作</th>
             </tr>
-            <tbody id="info" valign="middle">
+            <tbody id="info" >
             <tr>
                 <th><input id="1" type="checkbox"> </th>
-<!--                <td>成都</td>-->
-<!--                <td>赵雷</td>-->
+                <td>成都</td>
+                <td>赵雷</td>
                 <td><button class="btn_m" onclick="playerSong('+musicUrl+')">播放歌曲</button> </td>
                 <td><button class="btn_m" onclick="deleteInfo('+musicUrl+')">删除</button>
                     <button class="btn_m" onclick="loveInfo('+musicUrl+')">收藏</button>
@@ -157,8 +155,9 @@
             </tbody>
         </table>
     </div>
+
 </div>
-</body>
+    </body>
 <div style="width: 180px; height: 140px; position:absolute; bottom:10px; right:10px">
     <script type="text/javascript" src="player/sewise.player.min.js"></script>
     <script type="text/javascript">
